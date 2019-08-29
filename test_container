@@ -1,0 +1,28 @@
+Bootstrap:docker
+From:ubuntu:xenial
+
+%help
+This is the help message.
+
+%setup
+cd ${SINGULARITY_ROOTFS}
+
+%files
+
+%labels
+Maintainer hbraunDSP
+Version v0.1
+
+%environment
+
+%post
+apt-get update
+apt-get install wget
+
+# download and install Slicer
+cd /download
+curl -LJO https://github.com/Slicer/Slicer/archive/v4.10.2.tar.gz 
+echo "Here's where I'd install Slicer!"
+
+%runscript
+echo "Hello world!"
