@@ -17,7 +17,7 @@ Version v0.1
 
 %post
 apt-get update
-apt-get install wget
+apt-get install -y curl
 
 # download and install Slicer
 cd /download
