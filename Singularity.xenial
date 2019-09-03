@@ -21,7 +21,7 @@ apt-get update
 apt-get install -y sudo
 
 useradd ubuntu
-echo -e"ubuntu\nubuntu" | passwd ubuntu
+echo "ubuntu:ubuntu" | chpasswd
 usermod -aG sudo ubuntu
 
 
